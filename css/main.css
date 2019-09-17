@@ -33,7 +33,7 @@ body {
 
 p{
     font-size: 0.75em;
-    padding: 1rem;
+    padding: 0em;
     line-height: 25px;
 }
 
@@ -78,21 +78,26 @@ p{
 }
 
 /* Social links*/
+
+
 .social-links{
     list-style: none;
     padding: 0;
-    margin-top: 3em;
     display: flex;
     flex-direction: row;
-    justify-content: center
-
+    justify-content: center;
 }
 
 .social-links li a{
+    display: flex;
     color: #D7DEE6;
     text-decoration: none;
-    font-size: 2.5em;
+    font-size: 7.5em;
+    align-content: flex-start;
+    padding: 0 20px;
+    margin-bottom: 50px;
 }
+
 
 
 .green-area {
@@ -156,6 +161,13 @@ p{
 
 .about{
     margin-top: 2em;
+    display: flex;
+}
+
+.about .container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
 }
 
 .about h2 {
@@ -163,6 +175,7 @@ p{
     font-weight: 700;
     font-size: 1.125em;
     margin: 2em;
+    width: 100%;
 }
 
 .bio-info img{
@@ -177,16 +190,19 @@ p{
     letter-spacing: 2px;
 }
 
-.contact {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    padding: 0px 1em;
+.contact{
+    width: 50vh;
+    margin-bottom: 50px;
+}
+.bio-info{
+    width: 50vh;
 }
 
 .contact * + * {
     margin-top: 1.5em;
 }
+
+
 
 .contact-form {
     display: flex;
@@ -287,6 +303,12 @@ footer .social-links {
         display: block;
     }
 
+    .show-desktop i{
+        color:  #0AC693;
+        font-size: 3.0em;
+        margin-bottom: 70px;
+    }
+
     .hide-desktop {
         display: none;
     }
@@ -324,3 +346,5 @@ footer .social-links {
         max-width: 1440px;
     }
 }
+
+
