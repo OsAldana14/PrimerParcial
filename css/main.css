@@ -1,7 +1,13 @@
+/* Con el @import se le agrega un estilo de fuente a los titulos, parrafos, etc que se desea, con esto se le da el estilo que se desea y se busca
+atraves de google fonts*/
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
 
 /* El CSS siguiente esta pensando primero para moviles y luego para 
    Escritiorio*/
+
+
+   /* Esto hace que todos los elementos por defectos tengan margen y espaciado de 0 y que sea border-box por defecto ademas de
+   una fuente media para lo que se tiene por defecto*/
 *, ::before, ::after {
     margin: 0;
     padding: 0;
@@ -10,6 +16,11 @@
 }
 
 /* El estilo base para moviles */
+/* En este bloque se le da el color de fondo que tiene la partes denominadas "Big-hero" y  "About" respectivamente,
+ademas de dar el color blanco a los titulos, parrafos, logos, textos en general,
+Se les da la fuente Montserrat de la familia sans-serif a todo el texto del documento,
+Se alinean los textos para que esten en el centro del contenedor que pertenecen,
+y se le asigna un grosor a la fuente que en este caso es de 400*/
 body {
     background-color: #112935;
     color: white;
@@ -17,32 +28,36 @@ body {
     text-align: center;
     font-weight: 400;
 }
-
+/* Se le asigna al header la propiedad de ser flexible, y justificando sus objetos para que tengan el mismo espacio entre ellos. */
 .header {
     display: flex;
     justify-content: space-between
 }
 
+
+/* Se le agrega una fuente del nombre al documento */
 .src-only {
     display: none;
 }
 
+/* Se esconden para los dispositivos moviles algunos elementos */
 .hide-mobile {
     display: none;
 }
-
+/* Se le asigna un tamaño a los parrafos, espacio de 0 y el alto de las lineas de los parrafos. */
 p{
     font-size: 0.75em;
     padding: 0em;
     line-height: 25px;
 }
-
+/* Se agrega un valor al ancho del logo, y sus margenes */
 .logo {
     width: 90px;
     margin: 1em;
     margin-left: 50px;
 }
-
+/* Se le agrega el color que hereda, se quita la decoracion de texto, su posicion es relatica a la pantalla se aleja un 30% del alto
+de la pantalla y un 95% de la derecha, y se le asigna un tamaño a la fuente */
 .options {
     color: inherit;
     text-decoration: none;
@@ -56,26 +71,38 @@ p{
     align-items: flex-start;
 
 }
+
+/* Se le asigna un tamaño especificico al ultimo elemento i dentro de options*/
+
 .options i:last-child {
     font-size: 1.6rem;
 }
 
+/*Cuando se pasa el mouse por encima del menu la opcion se torna de color rojo */
 #menu li a:hover{
     color: red;
 }
 
+/* Se le asigna un color, un tamaño y un margen a la flecha que sirve como enlace*/
+.fa-arrow-circle-down{
+    color:  #0AC693;
+    font-size: 3.0em;
+    margin-bottom: 70px;
+}
+
 /* Big area */
+/* Se le asigna un valor a las imagenes dentro de este contenedor*/
 .big-hero img {
     width: 150px;
 }
-
+/* Se le asigna un tamaño a la fuente, un grosor, el espaciado entre las palabras y un margen superior*/
 .big-hero h2 {
     font-size: 1.875em;
     font-weight: 700;
     letter-spacing: 0.002em;
     margin-top: 1em ;
 }
-
+/* Se le asigna un tamaño a la fuentes dentro de este contenedor y un color*/
 .big-hero p {
     font-size: 0.7em;;
     color: #D7DEE6;
@@ -84,7 +111,8 @@ p{
 
 /* Social links*/
 
-
+/*Se le quita los puntitos que acompañan a las listas para que estos no aparezcan, no tiene espaciado, se hace flexible,
+se ordena en filas, y se ordenan sus elementos en el eje principal al centro */
 .social-links{
     list-style: none;
     padding: 0;
@@ -92,7 +120,8 @@ p{
     flex-direction: row;
     justify-content: center;
 }
-
+/* Se hace flexible el contenedor, la fuente es de color blanco, no hay decoracion de texto, tiene un tamaño, un espaciado entre
+los elementos y un margen inferior, Este bloque hace referencia a los logos de github y twitter*/
 .social-links li a{
     display: flex;
     color: #D7DEE6;
@@ -104,33 +133,37 @@ p{
 }
 
 
-
+/*Se le asigna un color a un area */
 .green-area {
     background-color: #0AC693; 
 }
 
-
+/* a todos los elementos de esta clase se le agrega un espaciado y un margen que al contrario de alejar a los otros elementos este los acerca*/
 .post {
     padding: 1em;
     margin-bottom: -2px;
 }
+
+/* A los titulos dentro de este contenedor se hacen mayusculas, un grosor y un tamaño de fuente mayor, y un margen*/
 .post h2 {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1.125em;
     margin: 1em;
 }
-
+/*Se le quita los puntitos que acompañan a las listas para que estos no aparezcan */
 .post ul {
     list-style: none;
 }
 
+/* A los articulos presentes en esta area se le asigna un valor minimo y maximo de altura y un margen  */ 
 .post ul li {
     min-height: 300px;
     max-width: 350px;
     margin: 2rem auto;
 }
-
+/* Al sobrellenado de este contenedor se esconde, se le agrega un bordeado circular, color blanco, se alinea el texto a la izquierda y un espaciado
+inferior */
 .post ul li article {
     overflow: hidden;
     border-radius: 10px;
@@ -138,13 +171,16 @@ p{
     text-align: left;
     padding-bottom: 2em;
 }
-
+/* Se le asigna tamaño a la imagen de los articulos, y ademas hace que se ajuste su tamaño con respecto
+al contenedor en el que esta contenido para mantener su aspecto */
 .post article img{
     height: 150px;
     width: 100%;
     object-fit: cover;
 }
-
+/* A los titulos de los articulos se les asigna un color, margen superior, espaciado, tamaño de fuente, Se ordena que tiene que 
+estar en una sola linea no puedo pasarse a otra, al sobrellenado el contenido extra se esconde, y al sobrellenado se agregan 3
+puntos suspensivos */
 .post article h3 {
     color: #0D5061;
     margin-top: 2em;
@@ -155,6 +191,7 @@ p{
     text-overflow: ellipsis;
 }
 
+/* Se le define un color a los parrafos de los articulos, tamaño de fuente, altura de linea y espaciado */
 .post article p {
     color:#112935;
     font-size: 0.75em;
@@ -163,17 +200,18 @@ p{
 }
 
 /* About */
-
+/*  Se le agrega un margen supeior al contenedor*/
 .about{
     margin-top: 2em;
 }
-
+/* Se vuelve un contenedor flexible, los objetos se presetan en filas y tienen la capacidad de pasar a una linea nueva cuando
+se extiende la pantalla, y tiene un espaciado entre los elementos */
 .about .container{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
 }
-
+/*  Los titulos son en mayusculas, se le agrega un grosor, un tamaño de fuente, un margen y una anchura del 100% */
 .about h2 {
     text-transform: uppercase;
     font-weight: 700;
@@ -181,11 +219,13 @@ p{
     margin: 2em;
     width: 100%;
 }
-
+/* Se define el tamaño de la imagen */
 .bio-info img{
    width: 200px;
 }
 
+/* Se definen todas las propiedades deseadas a los parrafos, su tamaño de fuente, espaciado, los textos se alinean a la izquierda
+Tamaño de linea, Espaciado entre letras y anchura */
 .bio-info p{
     font-size: 16px;
     padding: 2em;
@@ -195,31 +235,33 @@ p{
     width: 100%;
 }
 
+/*  Se le agrega margen inferior, anchura, margen izquierdo y derecho */
 .contact{
     margin-bottom: 50px;
     width: 400px;
     margin-left: 5px;
     margin-right: 5px;
 }
+/* Se le define un tamaño al contenedor  */
 .bio-info{
     width: 420px;
 }
-
+/* los elementos dentro de contact tienen un margin superior de 1.5em */
 .contact * + * {
     margin-top: 1.5em;
 }
 
 
-
+/* Se hace un contenedor flexible y se ordena por columnas */
 .contact-form {
     display: flex;
     flex-direction: column;
 }
-
+/* Al label se ordena su texto a la izquierda */
 .contact-form label{
     text-align: left;
 }
-
+/* A los inputs y al textarea se le agrega espaciado, sin borde, el borde es circulado, se le asigna tamaño de fuente y anchura 100%  */
 .contact-form input, .contact-form textarea{
     padding: 1rem 2rem;
     border: none;
@@ -229,17 +271,18 @@ p{
 }
 
 /* Decorando placeholder */
-
+/* Se le asigna color al placeholder*/
 ::-webkit-input-placeholder { 
     color: #D7DEE6; 
 } 
- 
+ /* Se configura para distintas versiones de los navegadores */
 :-moz-placeholder { /* Firefox 18- */ color: #D7DEE6; } 
  
 ::-moz-placeholder { /* Firefox 19+ */ color: #D7DEE6; } 
  
 :-ms-input-placeholder { color: #D7DEE6; }
 
+/* Se le asigna un color al boton y al de sus letras, el tamaño de la fuente dentro de este y un grosor */
 .contact-form input[type=submit] {
     background-color: #F74442;
     font-weight: 400;
@@ -247,19 +290,22 @@ p{
     font-size: 1rem;
 }
 
+/* Se le asigna un fondo a los elementos de la clase*/
 .black-decoration{
     background-image: url("../images/decoracion_oscura_small.svg");
 }
-
+/* Se le asigna un color al fondo del footer y un color para sus textos */
 footer{
     background-color: #0D5061;
     color:#D7DEE6;
 }
-
+/* Se le asigna un margen de 0 a los links de los logos de las redes sociales */
 footer .social-links {
     margin: 0;
 }
 
+/* Se le asigna un fondo al menu, su posicion para pantallas mas grandes, se le da un orden de apilamiento, se le asigna un espaciado superior
+se quita el derecho, una anchura y una altura calculada */
 .menu {
     background-color: #112935;
     position: absolute;
@@ -270,23 +316,27 @@ footer .social-links {
     height: calc(100vh - 60px);
 }
 
+/* Al menu se le quitan las viñetas que acompañan a la lista, se alinean a la izquierda y tienen un espaciado */
 .menu {
     list-style: none;
     text-align: left;
     padding: 1em;
 }
+
+/* Se presentan en un bloque, con un espaciado y un margen superior */
 .menu li {
     display: block;
     padding: 0.5em;
     margin-top: 5px;
 }
-
+/* se agrega color a cada elemento del menu, y se quita la decoracion del texto */
 .menu li a {
     color: white;
     text-decoration: none;
     
 }
 
+/* Se le agrega margen y espaciado a los enlaces */
 footer .social-links li a{
     margin-top: 10px;
     padding: 0 20px;
@@ -295,14 +345,15 @@ footer .social-links li a{
 
 /* Pesonalizando estilo para tablets*/
 @media only screen and (min-width: 768px) {
-  
+  /* Se quitan las viñetas de las listas, se hace flexible, se puede pasar a otra linea el elemento si sobrepasa el limite de anchura
+  y los elementos se ordenan al centro */
     .post ul {
         list-style: none;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
-    
+    /* Se le agrega un valor min y max a los articulos, margen y la posibilidad de estirarse mas no de encogerse con un tamaño base de 300px */
     .post ul li {
         min-height: 350px;
         max-height: 3500px;
@@ -310,26 +361,21 @@ footer .social-links li a{
         flex: 1 0 300px;
     }
 
-
+/* Tamaño del logo y espaciado */
     .logo {
         width: 150px;
         margin: 1.5em;
     }
-
+/* Todo aquello que se muestra en escritorio se presenta en forma de bloque y se ordena al centro */
     .show-desktop {
         display: block;
+        justify-content: center;
     }
-
-    .fa-arrow-circle-down{
-        color:  #0AC693;
-        font-size: 3.0em;
-        margin-bottom: 70px;
-    }
-
+/* Aquello que forme parte de esta clase no saldra para estos tamaños de pantalla */
     .hide-desktop {
         display: none;
     }
-
+/* Se definen los valores que tomara el menu que anteriormente fueron explicados, con la diferencia que el menu ahora es estatico. */
     .menu {
         background-color: #112935; 
         position: static;
@@ -339,33 +385,22 @@ footer .social-links li a{
         display: flex;
         margin-top: 1em;
     }
-
-
-
-
-    /*TODO: FALTA CSS */
 } 
 
+/* Se agrega funcionamientos a las vistas en tablets */
 @media only screen and (min-width: 1024px) {
-
-
-
-     
-
+    /* Al estar en este tipo de pantallas se ordenan los elementos en filas y columnas pares */
+}
       .green-area .container ul{
           display: flex;
           justify-content: flex-start;
           flex-flow: row wrap;
           margin-left: 60px;
       }
-    
-
-
 }
 
 @media only screen and (min-width: 1440px) {
-
-    /*TODO: FALTA CSS */
+/* Se le asigna un nuevo valor al contenedor y un valor maximo de anchura que puede tomar */
     .container {
         width: 80%;
         margin: 0 auto;
